@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className='bg-base-100 shadow-sm'>
              <div className="navbar container mx-auto ">
   <div className="flex-1">
-                <Image src={logo} >
+                <Image src={logo} height='auto' width='auto' alt='logo'>
                     
    </Image>
   </div>

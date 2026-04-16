@@ -12,7 +12,7 @@ const Footer = () => {
   <aside>
                 <Image
                     width={200}
-                    height={100}
+                    height='auto'
                 src={logo} alt='keen-keeper logo'/>
     <p className="font-bold px-12">
       Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
@@ -25,20 +25,23 @@ const Footer = () => {
       <a>
                         <Image
                             src={fbLogo}
-                        alt='facebook logo'/>
+                                alt='facebook logo'
+                                height='auto' width='auto'                            />
       </a>
       <a>
                         <Image
-                        src={instaLogo} alt='instagram logo'/>
+                                src={instaLogo} alt='instagram logo'
+                            height='auto' width='auto' />
       </a>
       <a>
-        <Image src={Xlogo} alt='twitter logo'/>
+                            <Image src={Xlogo} alt='twitter logo'
+                            height='auto' width='auto' />
       </a>
     </div>
             </nav>          
         </footer>
             <div className='divider'></div>
-            <footer className='pb-12 container mx-auto'>
+            <footer className='pb-6 container mx-auto'>
                  <div className='flex justify-between md:flex-row flex-col items-center text-zinc-300 space-y-2'>
                 <div>  <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                 </div>
