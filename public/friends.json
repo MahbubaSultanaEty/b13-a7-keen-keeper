@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Aarav Khan",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&clotheType=ShirtCrewNeck&eyeType=Default&mouthType=Smile&skinColor=Light",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200",
     "email": "aarav.khan@example.com",
     "days_since_contact": 16,
     "status": "overdue",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Nusrat Jahan",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&clotheType=BlazerShirt&eyeType=Happy&mouthType=Smile&skinColor=Light",
+    "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200",
     "email": "nusrat.jahan@example.com",
     "days_since_contact": 10,
     "status": "almost due",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Tanvir Hasan",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairSides&clotheType=Hoodie&eyeType=Default&mouthType=Serious&skinColor=Brown",
+    "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200",
     "email": "tanvir.hasan@example.com",
     "days_since_contact": 5,
     "status": "on-track",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Mehedi Rahman",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&clotheType=ShirtVNeck&eyeType=Squint&mouthType=Smile&skinColor=Brown",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200",
     "email": "mehedi.rahman@example.com",
     "days_since_contact": 20,
     "status": "overdue",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "Sadia Afrin",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurvy&clotheType=ShirtScoopNeck&eyeType=Default&mouthType=Smile&skinColor=Light",
+    "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200",
     "email": "sadia.afrin@example.com",
     "days_since_contact": 12,
     "status": "almost due",
@@ -60,21 +60,21 @@
     "next_due_date": "2025-07-21"
   },
   {
-    "id": 6,
-    "name": "Rakib Hossain",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&clotheType=GraphicShirt&eyeType=Happy&mouthType=Smile&skinColor=Brown",
-    "email": "rakib.hossain@example.com",
-    "days_since_contact": 3,
-    "status": "on-track",
-    "tags": ["university", "project mate"],
-    "bio": "Worked on multiple projects together.",
-    "goal": 14,
-    "next_due_date": "2025-07-30"
-  },
+  "id": 6,
+  "name": "Rakib Hossain",
+  "image": "https://randomuser.me/api/portraits/men/32.jpg",
+  "email": "rakib.hossain@example.com",
+  "days_since_contact": 3,
+  "status": "on-track",
+  "tags": ["university", "project mate"],
+  "bio": "Worked on multiple projects together.",
+  "goal": 14,
+  "next_due_date": "2025-07-30"
+},
   {
     "id": 7,
     "name": "Farhana Islam",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=Hijab&clotheType=BlazerSweater&eyeType=Default&mouthType=Smile&skinColor=Brown",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200",
     "email": "farhana.islam@example.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Imran Chowdhury",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortRound&clotheType=Hoodie&eyeType=Default&mouthType=Smile&skinColor=Brown",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200",
     "email": "imran.c@example.com",
     "days_since_contact": 9,
     "status": "almost due",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "Tania Sultana",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight2&clotheType=BlazerShirt&eyeType=Happy&mouthType=Smile&skinColor=Light",
+    "image": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=200",
     "email": "tania.sultana@example.com",
     "days_since_contact": 2,
     "status": "on-track",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Shakil Ahmed",
-    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&clotheType=ShirtCrewNeck&eyeType=Default&mouthType=Serious&skinColor=Brown",
+    "image": "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=200",
     "email": "shakil.ahmed@example.com",
     "days_since_contact": 15,
     "status": "overdue",

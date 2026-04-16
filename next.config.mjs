@@ -1,7 +1,25 @@
-/** @type {import('next').NextConfig} */
+import { Search } from "lucide-react";
+
+// next.config.js
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        port: '',
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+        
+      },
+      {
+        protocol: "https",
+        port: '',
+        hostname: "randomuser.me",
+        pathname: "/**",
+        
+      },
+    ],
+  },
 };
 
 export default nextConfig;
