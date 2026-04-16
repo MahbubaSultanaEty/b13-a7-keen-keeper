@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Khan",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&clotheType=ShirtCrewNeck&eyeType=Default&mouthType=Smile&skinColor=Light",
+    "email": "aarav.khan@example.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["school", "best friend"],
+    "bio": "School friend. Loves football and gaming.",
+    "goal": 14,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&clotheType=BlazerShirt&eyeType=Happy&mouthType=Smile&skinColor=Light",
+    "email": "nusrat.jahan@example.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["college", "study buddy"],
+    "bio": "We studied together in college. Loves coffee chats.",
+    "goal": 14,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Hasan",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairSides&clotheType=Hoodie&eyeType=Default&mouthType=Serious&skinColor=Brown",
+    "email": "tanvir.hasan@example.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["office", "teammate"],
+    "bio": "Colleague from first job. Very chill guy.",
+    "goal": 14,
+    "next_due_date": "2025-07-28"
+  },
+  {
+    "id": 4,
+    "name": "Mehedi Rahman",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairDreads01&clotheType=ShirtVNeck&eyeType=Squint&mouthType=Smile&skinColor=Brown",
+    "email": "mehedi.rahman@example.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["gym", "fitness"],
+    "bio": "Gym partner. Keeps pushing me to stay fit.",
+    "goal": 14,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 5,
+    "name": "Sadia Afrin",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairCurvy&clotheType=ShirtScoopNeck&eyeType=Default&mouthType=Smile&skinColor=Light",
+    "email": "sadia.afrin@example.com",
+    "days_since_contact": 12,
+    "status": "almost due",
+    "tags": ["neighbor", "childhood"],
+    "bio": "Childhood neighbor. Always supportive.",
+    "goal": 14,
+    "next_due_date": "2025-07-21"
+  },
+  {
+    "id": 6,
+    "name": "Rakib Hossain",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&clotheType=GraphicShirt&eyeType=Happy&mouthType=Smile&skinColor=Brown",
+    "email": "rakib.hossain@example.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["university", "project mate"],
+    "bio": "Worked on multiple projects together.",
+    "goal": 14,
+    "next_due_date": "2025-07-30"
+  },
+  {
+    "id": 7,
+    "name": "Farhana Islam",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=Hijab&clotheType=BlazerSweater&eyeType=Default&mouthType=Smile&skinColor=Brown",
+    "email": "farhana.islam@example.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["travel", "friend"],
+    "bio": "Travel partner. Loves exploring new places.",
+    "goal": 14,
+    "next_due_date": "2025-07-17"
+  },
+  {
+    "id": 8,
+    "name": "Imran Chowdhury",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortRound&clotheType=Hoodie&eyeType=Default&mouthType=Smile&skinColor=Brown",
+    "email": "imran.c@example.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["gaming", "online"],
+    "bio": "Met online. We play FPS games together.",
+    "goal": 14,
+    "next_due_date": "2025-07-23"
+  },
+  {
+    "id": 9,
+    "name": "Tania Sultana",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight2&clotheType=BlazerShirt&eyeType=Happy&mouthType=Smile&skinColor=Light",
+    "email": "tania.sultana@example.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["work", "mentor"],
+    "bio": "Mentor at work. Helps me grow professionally.",
+    "goal": 14,
+    "next_due_date": "2025-07-31"
+  },
+  {
+    "id": 10,
+    "name": "Shakil Ahmed",
+    "image": "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&clotheType=ShirtCrewNeck&eyeType=Default&mouthType=Serious&skinColor=Brown",
+    "email": "shakil.ahmed@example.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["school", "old friend"],
+    "bio": "Lost touch after school. Need to reconnect.",
+    "goal": 14,
+    "next_due_date": "2025-07-19"
+  }
+]
