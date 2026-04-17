@@ -1,74 +1,92 @@
 "use client"
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { TimelineLogsContext } from '../context/TimelineLogsContextProvider';
 import useFriends from '@/components/hooks/useFriends';
 
 const TimeLinePage = () => {
-    const { friends = [] } = useFriends();
-    const { timelineLogs  } = useContext(TimelineLogsContext);
+  const { timelineLogs } = useContext(TimelineLogsContext);
 
-    console.log(timelineLogs, "time line page");
+  const [filter, setFilter] = useState("all");
 
-    
-    return (
-        <div className='w-11/12 mx-auto my-8'>
-            <h2 className=" text-5xl font-bold text-[#3e490a]">Timeline</h2>
-            {/* sorting dropsown  */}
-            <div className="dropdown dropdown-bottom mt-2">
-  <div tabIndex={0} role="button" className="btn m-1">Filter Timeline ⬇️</div>
-  <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-    <li><a>Call</a></li>
-                    <li><a>Text</a></li>
-                    <li><a >Video</a></li>
-  </ul>
-            </div>
-            
-           <div className="space-y-4 my-4">
-  
-  {timelineLogs.length === 0 ? (
-    <div className="w-full h-[60vh] p-6 justify-center bg-white rounded-lg shadow-sm flex items-center">
-      <p className="text-gray-500 ">
-        No timeline logs yet 
-      </p>
-    </div>
-  ) : (
-    timelineLogs.map((timelineLog, index) => {
-      const icon =
-        timelineLog.label === "Text"
-          ? "💬"
-          : timelineLog.label === "Call"
-          ? "📞"
-          : timelineLog.label === "Video"
-          ? "🎥"
-          : "";
+  const filteredLogs =
+    filter === "all"
+      ? timelineLogs
+      : timelineLogs.filter(log => log.label === filter);
 
-      return (
-        <div
-          className="w-full flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm"
-          key={index}
+  return (
+    <div className="w-11/12 mx-auto my-8">
+      
+      {/* Title */}
+      <h2 className="text-5xl font-bold text-[#3e490a]">
+        Timeline
+      </h2>
+
+      {/* Dropdown Filter */}
+      <div className="dropdown dropdown-bottom mt-3">
+        <div tabIndex={0} role="button" className="btn m-1">
+          Filter Timeline ⬇️
+        </div>
+
+        <ul
+          tabIndex={-1}
+          className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow"
         >
-          <div className="text-2xl">{icon}</div>
+          <li><a onClick={() => setFilter("all")}>All</a></li>
+          <li><a onClick={() => setFilter("Call")}>Call</a></li>
+          <li><a onClick={() => setFilter("Text")}>Text</a></li>
+          <li><a onClick={() => setFilter("Video")}>Video</a></li>
+        </ul>
+      </div>
 
-          <div className="space-y-2">
-            <p className="text-base text-gray-800">
-              <span className="font-semibold">
-                {timelineLog.label}
-              </span>{" "}
-              with {timelineLog.specificFriend.name}
-            </p>
+      {/* Timeline */}
+      <div className="space-y-4 my-4">
 
-            <p className="text-xs text-gray-500">
-              {timelineLog.time}
+        {filteredLogs.length === 0 ? (
+          <div className="w-full h-[60vh] flex items-center justify-center bg-white rounded-lg shadow-sm">
+            <p className="text-gray-500">
+              No timeline logs yet 
             </p>
           </div>
-        </div>
-      );
-    })
-  )}
+        ) : (
+          filteredLogs.map((log, index) => {
+            const icon =
+              log.label === "Text"
+                ? "💬"
+                : log.label === "Call"
+                ? "📞"
+                : log.label === "Video"
+                ? "🎥"
+                : "";
 
-</div>
-        </div>
-    );
+            return (
+              <div
+                key={index}
+                className="w-full flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm"
+              >
+                {/* Icon */}
+                <div className="text-2xl">{icon}</div>
+
+                {/* Content */}
+                <div className="space-y-2">
+                  <p className="text-base text-gray-800">
+                    <span className="font-semibold">
+                      {log.label}
+                    </span>{" "}
+                    with {log.specificFriend.name}
+                  </p>
+
+                  <p className="text-xs text-gray-500">
+                    {log.time}
+                  </p>
+                </div>
+              </div>
+            );
+          })
+        )}
+
+      </div>
+    </div>
+  );
 };
 
 export default TimeLinePage;
