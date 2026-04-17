@@ -5,7 +5,7 @@ import useFriends from '@/components/hooks/useFriends';
 
 const TimeLinePage = () => {
   const { timelineLogs } = useContext(TimelineLogsContext);
-
+ console.log(timelineLogs);
   const [filter, setFilter] = useState("all");
 
   const filteredLogs =
