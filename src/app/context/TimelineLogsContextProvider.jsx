@@ -3,7 +3,7 @@ import React, { Children, createContext, useState } from 'react';
 
 export const TimelineLogsContext = createContext();
 
-const TimelineLogsContextProvider = () => {
+const TimelineLogsContextProvider = ({children}) => {
     const [timelineLogs, setTimelineLogs] = useState([]);
 
     const data = {
@@ -12,7 +12,7 @@ const TimelineLogsContextProvider = () => {
     }
     return (
         <TimelineLogsContext.Provider value={data}>
-            {Children}
+            {children}
        </TimelineLogsContext.Provider>
     );
 };

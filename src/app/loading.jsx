@@ -1,9 +1,10 @@
 import React from 'react';
+import { GridLoader } from 'react-spinners';
 
  export default function loading ()  {
     return (
-        <div>
-           <div className="skeleton h-60 w-60"></div>
+        <div className="h-screen flex items-center justify-center">
+           <GridLoader />
         </div>
     );
 };
