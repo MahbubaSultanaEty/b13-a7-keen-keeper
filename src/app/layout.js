@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TimelineLogsContextProvider from "./context/TimelineLogsContextProvider";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-gray-100">
         <Navbar></Navbar>
+        <ToastContainer />
         <TimelineLogsContextProvider>
 {children}
         </TimelineLogsContextProvider>

@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import { AlarmClockOff, Archive, Delete, DeleteIcon, Icon, LucideDelete, MessageCircle, Phone, VideoIcon } from 'lucide-react';
 import { TimelineLogsContext } from '@/app/context/TimelineLogsContextProvider';
+import { toast } from 'react-toastify';
 
 const iconMap = {
     call: Phone,
@@ -26,6 +27,14 @@ const ActionBtnsForTimeline = ({ type, label, specificFriend }) => {
     
     const handleTimelineLogs = (specificFriend) => {
         setTimelineLogs([...timelineLogs, newLog]);
+
+        if (label == "Call") {
+            toast.success(`calling ${specificFriend.name}`)
+        } else if (label == "Text") {
+            toast.success(`texting with ${specificFriend.name}`)
+        } else if(label == "Video"){
+            toast(`Video Call Started With ${specificFriend.name}`)
+        }
         
     }
 

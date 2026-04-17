@@ -29,7 +29,7 @@ const StatsPage = () => {
         <div className='w-11/12 md:w-8/12 mx-auto my-12'>
             <h2 className="font-bold text-3xl">Friendship Analytics</h2>
             <div className="bg=white  border-t-2 shadow-lg   p-8 rounded-xl my-4 ">
-                <p className=' font-semibold md:text-lg text-[#40681c]'>By Interaction Type</p>
+                <p className=' font-semibold md:text-lg text-[#395520]'>By Interaction Type</p>
                 <div className='flex items center justify-center'>
   <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
       <Pie
