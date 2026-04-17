@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const FriendCard = ({ friend }) => {
     
@@ -8,7 +9,9 @@ const FriendCard = ({ friend }) => {
         "almost due": "text-white bg-yellow-500",
         "overdue" : "text-white bg-red-600"
     }
-    return (
+  return (
+    <Link href={`${friend.id}`}>
+      
         <div>
             <div className="bg-white rounded-xl shadow p-4 space-y-3 flex flex-col items-center justify-center ">
 
@@ -52,6 +55,8 @@ const FriendCard = ({ friend }) => {
       </div>
     </div>
         </div>
+      </Link>
+      
     );
 };
 
