@@ -2,12 +2,13 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { AlarmClockOff, Archive, Delete, DeleteIcon, LucideDelete } from 'lucide-react';
+import { AlarmClockOff, Archive, Delete, DeleteIcon, LucideDelete, MessageCircle, Phone, VideoIcon } from 'lucide-react';
+import { notFound } from 'next/navigation';
 
 
 const friendsPromise = async () => {
     const res = await fetch("http://localhost:3000/friends.json");
-    const data = res.json();
+    const data = await res.json();
 
     return data
 }
@@ -15,15 +16,23 @@ const friendsPromise = async () => {
 const FriendsDetailsPage = async ({params}) => {
    
    console.log(params);
-    const { friendId } = await params;
+    const { friendId } =  params;
     const friends = await friendsPromise();
     console.log(friends, friendId);
     
     const specificFriend = friends.find(friend => friend.id === Number(friendId));
 
+     if (!specificFriend) {
+        notFound();
+    }
+
     console.log(specificFriend);
 
+
+
     const { name, image, email, days_since_contact, status, tags, bio, goal, next_due_date } = specificFriend;
+
+   
     
       const btnStyle = {
             width: "100%",
@@ -41,6 +50,8 @@ const FriendsDetailsPage = async ({params}) => {
         "almost due": "text-white bg-yellow-500",
         "overdue" : "text-white bg-red-600"
     }
+
+    const quickCheckBtn= `btn flex items-center  py-12`
     
     return (
         <div className="p-6  bg-gray-100 min-h-screen container mx-auto">
@@ -93,21 +104,21 @@ const FriendsDetailsPage = async ({params}) => {
                
          
                          {/* right part */}
-                         <div className='md:col-span-4'>
+                         <div className='md:col-span-4 space-y-5 my-4'>
                  {/* STATS */}
-                         <div className='flex'>
-                              <div className="bg-white rounded-xl p-4 shadow text-center">
-                                 <h2 className="text-2xl font-bold">{ days_since_contact}</h2>
+                         <div className='grid grid-cols-3 gap-2'>
+                              <div className="bg-white rounded-xl py-6 shadow text-center">
+                                 <h2 className="text-2xl font-bold text-[#4c6b13]">{ days_since_contact}</h2>
                    <p className="text-sm text-gray-500">Days Since Contact</p>
                  </div>
          
-                 <div className="bg-white rounded-xl p-4 shadow text-center">
-                   <h2 className="text-2xl font-bold">30</h2>
+                 <div className="bg-white rounded-xl py-6 text-[#4c6b13] shadow text-center">
+                   <h2 className="text-2xl font-bold">{goal}</h2>
                    <p className="text-sm text-gray-500">Goal (Days)</p>
                  </div>
          
-                 <div className="bg-white rounded-xl p-4 shadow text-center">
-                   <h2 className="text-lg font-semibold">Feb 27, 2026</h2>
+                 <div className="bg-white rounded-xl py-6 text-[#4c6b13] shadow text-center">
+                            <h2 className="text-lg font-semibold">{ next_due_date}</h2>
                    <p className="text-sm text-gray-500">Next Due</p>
                  </div>
                          </div>
@@ -130,9 +141,9 @@ const FriendsDetailsPage = async ({params}) => {
                    <h3 className="mb-3 font-semibold">Quick Check-In</h3>
          
                    <div className="grid grid-cols-3 gap-4">
-                     <button className="border rounded-lg py-4">📞 Call</button>
-                     <button className="border rounded-lg py-4">💬 Text</button>
-                     <button className="border rounded-lg py-4">🎥 Video</button>
+                     <button className={quickCheckBtn}><Phone/> Call</button>
+                     <button className={quickCheckBtn}><MessageCircle/> Text</button>
+                     <button className={quickCheckBtn}><VideoIcon/> Video</button>
                    </div>
                  </div>
                          </div>
